@@ -1,0 +1,583 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 6</title>
+    <link rel="stylesheet" href="/static/stylesheets/styles.css">
+
+    
+<style>
+    body {
+    background-image: url('../static/images/PICTURE.jpg');
+
+    background-size: 100%;
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#news-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+.container {
+        text-align: center;
+        padding: 20px;
+        position: relative; 
+    }
+    
+.container h1 {
+        position: absolute;
+        bottom: 40%; 
+        left: 20px; 
+        color: white;
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        font-size: 60px;
+}
+    
+.header{
+    background-color: #86c689;
+    padding: 20px 0;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+}
+#siteTitle {
+    font-size: 50px;
+    color: rgb(6, 143, 81);
+    margin-top: 20px;
+}
+h1 {
+    color: white;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    padding-left: 20px;
+    font-size: 60px;
+    text-align: left;
+}
+
+.row{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+.col{
+    flex-basis: 70%;
+}
+.nav {
+    padding: 20px 60px 20px 60px; /* Adjust padding for better spacing */
+    background-color: #f0f0f0;
+    text-align: center;
+    position:relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 60px;
+    font-weight: bold;
+    display: flex;
+    top: 0;
+    right: 20px;
+    position: absolute;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+nav ul li {
+    margin:  15px;
+    display: inline-block;
+    position: relative;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #007BFF;
+}
+.nav h1 {
+    color: white;
+    margin: 0;
+    font-size: 39px;
+    margin-top: 40px;
+}
+
+.nav p {
+    color: green;
+    margin: 5px 0;
+    font-size: 24px;
+}
+.container {
+    text-align: center;
+    padding: 20px;
+}
+#Unique {
+    width: 600px;
+}
+.col {
+    flex: 1 1 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    max-width: 100%;
+}
+.button-container{
+    margin-top: auto;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center; /* Center cards horizontally */
+    align-items: center;     /* Center cards vertically within the container */
+    gap: 20px;               /* Space between the cards */
+    padding: 20px;  
+    overflow-x: auto;        /* Allows horizontal scrolling if content overflows */
+    white-space: nowrap;         /* Padding around the container */
+
+}
+.card {
+    width: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    
+    background-position: center;
+    background-size: cover;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    position: relative;
+}
+
+.card h1 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.card label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.card input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.card button {
+    width: 100%;
+    padding: 10px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #219150;
+}
+
+.recommendations {
+    margin-top: 10px;
+    padding: 10px;
+    background: #ecf0f1;
+    border-radius: 5px;
+    text-align: left;
+    max-height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#closeRecommendations {
+    background-color: #e74c3c; /* Red color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.recommendations button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+.crop-form {
+    max-width: 300px; /* Adjusted width for a more compact layout */
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto; /* Center align */
+    text-align: left; /* Align text to the left for a cleaner form layout */
+    box-sizing: border-box;
+}
+
+.crop-form h2 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.crop-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.crop-form input[type="number"],
+.crop-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.crop-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.crop-form button:hover {
+    background-color: #219150;
+}
+
+.recommendations {
+    margin-top: 20px;
+    padding: 10px;
+    background: #ecf0f1;
+    border-radius: 5px;
+    text-align: left;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 1;
+}
+#newsDropdown {
+    display: none;
+    position: absolute; 
+    top: 100%;
+    left: 50%;
+    width: 250px; 
+    max-width: 90vw;
+    transform: translateX(-70%);
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000; 
+    border-radius: 8px;
+}
+.footer {
+    background-color: white;
+    color: green;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer h4 {
+    margin-bottom: 1rem;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact p,
+.footer-bottom p {
+    margin: 0.5rem 0;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+</style></head>
+
+<body>
+    <nav>
+        <div class="nav">
+            
+            <h1 id="siteTitle">Agro Easy</h1>
+
+                    <p>Simple tips for a Greener Tomorrow!</p>
+                
+            <ul>
+                
+                <li><a id="newsButton" href="javascript:void(0);" onclick="toggleDropdown()">Recommend</a>
+                    <div id="newsDropdown" class="dropdown-content">
+                        <div class="crop-form">
+                            <h2>Crop Recommendation Tool</h2>
+                            <label for="landSize">Land Size (in acres):</label>
+                            <input type="number" id="landSize" placeholder="Enter land size in acres">
+        
+                            <label for="location">Location:</label>
+                            <input type="text" id="location" placeholder="City, Region">
+        
+                            <label for="season">season:</label>
+                            <input type="text" id="season" placeholder="Enter Season">
+        
+                            <button id="recommendCropButton">Get Crop Recommendations</button>
+        
+                            <div id="cropRecommendations" class="recommendations"></div>
+                            <button id="closeCropRecommendations" style="display:none;">Close</button>
+                        </div>
+                    </div>
+            
+                <li><a href="{{ url_for('about') }}">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="card-container">
+        <div class="card" id="Unique"> 
+            <h1>Farmers' Insecticide & Pesticide Creator</h1>
+            <label for="productInput">Enter the products you have (comma-separated):</label>
+            <input type="text" id="productInput" placeholder="e.g., soap, garlic, water">
+            <div class="button-container">
+
+            <button id="recommendButton">Get Recommendations</button>
+            </div>
+        <div id="recommendations" class="recommendations" style="display:none;"> 
+    
+        </div>
+        <button id="closeRecommendations" style="display:none;"> Close</button>
+        </div>
+
+    </div>
+    
+
+
+<div class="col">
+    <div class="card" onclick="getNews('fertilizers')">
+        <h1>DIY Fertilizers</h1>
+        <p>Information on creating DIY fertilizers using local resources.</p>
+    </div>
+    <div class="card" onclick="getNews('pesticide')">
+        <h1>DIY Pesticides</h1>
+        <p>Information on creating DIY pesticides using local resources.</p>
+    </div>
+    <div class="card" onclick="getNews('crop rotation')">
+        <h1>Crop Rotation Tips</h1>
+        <p>Best practices for crop rotation to maintain soil health.</p>
+    </div>
+    <div class="card" onclick="getNews('insecticide')">
+        <h1>Pest Control Techniques</h1>
+        <p>Natural pest control methods suitable for small-scale farming.</p>
+    </div>
+</div>
+<details id="news-container">
+<summary>Click here to learn more</summary>
+<p>This is the hidden content that is shown when the summary is clicked.</p>
+</details>
+
+
+
+<footer class="footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="{{ url_for('about') }}">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>Email: support@example.com</p>
+                    <p>Phone: +123-456-7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Your Company. All rights reserved.</p>
+            </div>
+        </footer>
+
+<script>
+    
+document.getElementById('recommendCropButton').addEventListener('click', function() {
+            const landSize = document.getElementById('landSize').value;
+            const location = document.getElementById('location').value;
+            const season = document.getElementById('season').value;
+
+            const cropRecommendations = document.getElementById('cropRecommendations');
+            cropRecommendations.innerHTML = `Based on ${landSize} acres in ${location} during ${season}, consider these crops: ...`; // Add your logic here
+            cropRecommendations.style.display = 'block'; // Show recommendations
+            document.getElementById('closeCropRecommendations').style.display = 'block'; // Show close button
+        });
+
+    function getNews(topic) {
+        fetch(`/news/${topic}`)
+            .then(response => response.json())
+            .then(data => {
+                let articles = data.articles.map(article => `
+                    <h2>${article.title}</h2>
+                    <p>${article.description}</p>
+                    <a href="${article.url}" target="_blank">Read more</a>
+                `).join('');
+                
+                document.getElementById('news-container').innerHTML = articles;
+            })
+            .catch(error => console.error('Error fetching news:', error));
+    }
+    document.getElementById("recommendButton").onclick = function() {
+        const productInput = document.getElementById("productInput").value;
+        
+        fetch("/get-recommendations", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ products: productInput })
+        })
+        .then(response => response.json())
+        .then(data => {
+            const recommendationsDiv = document.getElementById("recommendations");
+            const closeButton = document.getElementById("closeRecommendations");
+
+            recommendationsDiv.innerHTML = '';
+
+            if (Array.isArray(data.recommendations) && data.recommendations.length > 0) {
+                recommendationsDiv.innerHTML = data.recommendations.map(item => `<p>${item}</p>`).join('');
+                recommendationsDiv.style.display = "block";  // Show recommendations
+                closeButton.style.display = "block"; // Show close button
+            } else {
+                recommendationsDiv.innerHTML = `<p>No recommendations available.</p>`;
+                recommendationsDiv.style.display = "block";  // Show recommendations even if empty
+                closeButton.style.display = "block"; // Show close button
+            }
+        })
+        .catch(error => console.error('Error fetching recommendations:', error));
+    };
+
+    document.getElementById("closeRecommendations").onclick = function() {
+        const recommendationsDiv = document.getElementById("recommendations");
+        recommendationsDiv.style.display = "none";  // Hide recommendations
+        this.style.display = "none";  // Hide close button
+    };
+    document.getElementById("recommendCropButton").addEventListener('click', function () {
+        const landSize = document.getElementById("landSize").value;
+        const location = document.getElementById("location").value;
+        const season = document.getElementById("season").value;
+
+        fetch('/get-crop-recommendations', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ landSize, location, season })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            const cropRecommendationsDiv = document.getElementById('cropRecommendations');
+                cropRecommendationsDiv.innerHTML = data.crop_recommendations.join('<br>');
+            document.getElementById("cropRecommendations").innerHTML =  data.crop_recommendations.join('<br>');
+        })
+        .catch(error => console.error('Error fetching crop recommendations:', error));
+        
+    });
+
+    document.getElementById("newsButton").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    const dropdown = document.getElementById("newsDropdown");
+    // Toggle visibility of dropdown
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+});
+
+// Optional: Close dropdown when clicking outside
+document.addEventListener("click", function(event) {
+    const newsButton = document.getElementById("newsButton");
+    const newsDropdown = document.getElementById("newsDropdown");
+    if (!newsButton.contains(event.target) && !newsDropdown.contains(event.target)) {
+        newsDropdown.style.display = "none";
+    }
+});
+
+</script>
+
+
+
+</body></html>

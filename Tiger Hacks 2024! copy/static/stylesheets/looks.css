@@ -1,0 +1,189 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f9f8f4;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #2b7a0b;
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+/* Add background image and left-alignment to the intro */
+.intro {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: flex-start;
+  height: 300px; /* Adjust the height as needed */
+  margin-bottom: 20px;
+}
+
+/* Style for the image */
+.intro-image {
+  width: 100%;
+  height:100%;
+  object-fit:cover; /* Ensures the image covers the area */
+  object-position: center; /* Positions focus on the right */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro::before {
+  content:'';
+  width: 100%;
+  height:100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black */
+  z-index: 1; /* Places overlay below text */
+}
+
+/* Text overlay styling */
+.intro-text {
+  position: absolute;
+  left: 25px; /* Adjust left margin as needed */
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.15em;
+  text-align: justify;
+  max-width: 42%; /* Limits width to keep it on the left */
+  z-index: 1;
+  word-spacing: -0.1em; /* Adjust this value */
+  letter-spacing: -0.05em; /* Optional adjustment */
+   hyphens: auto; /* Enable hyphenation */
+
+}
+
+
+.mission-section, .team-section {
+  margin-top: 0px;
+}
+
+.farmer-story {
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #eaf0e2;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-section h2 {
+  color: #2b7a0b;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.team {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+
+}
+
+.team-member {
+  width: 30%;
+  text-align: center;
+}
+
+.team-member h3 {
+  font-size: 1.2em;
+  text-align: center;
+  color: #4c4c4c;
+}
+
+.team-member p:nth-of-type(1) {
+  font-weight: bold;
+  color: #4c4c4c; /* Example color for the role */
+}
+
+/* Target the second paragraph in .team-member */
+.team-member p:nth-of-type(2) {
+  font-style: italic;
+  text-align: justify;
+  color: #4c4c4c; /* Example color for the bio text */
+  line-height:1.2;
+
+  width: 100%;
+}
+.button-container {
+  text-align: center; /* Center the button */
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+.go-home-button {
+  display: inline-block; /* Make the link behave like a button */
+  padding: 10px 20px; /* Add padding for better appearance */
+  background-color: #4CAF50; /* Green background color */
+  color: white; /* White text color */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline from link */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s; /* Transition effect for hover */
+}
+
+.go-home-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Footer Styles */
+.footer {
+  background-color: white;
+  color: green;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer h4 {
+  margin-bottom: 1rem;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact p,
+.footer-bottom p {
+  margin: 0.5rem 0;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
